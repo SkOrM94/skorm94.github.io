@@ -5,7 +5,7 @@
     --primary-color: #0F172A; /* Slate 900 - Dark Navy/Blue */
     --secondary-color: #A1A1AA; /* Slate 400 - Muted Gray */
     --accent-color: #CA8A04; /* Amber 700 - Gold/Tan Accent */
-    --light-bg: #F8FAF C; /* Off-White/Light Gray */
+    --light-bg: #F8FAFC; /* Off-White/Light Gray */
     --font-family-base: 'Inter', sans-serif;
     --font-weight-light: 300;
 }
@@ -13,7 +13,8 @@
 /* Base Styling */
 body {
     font-family: var(--font-family-base);
-    padding-top: 4rem; /* For fixed navbar */
+    /* Set padding-top to match the navbar's height */
+    padding-top: 70px; 
     background-color: white;
     color: #333;
 }
@@ -25,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-title {
-    font-size: 2.25rem; /* Equivalent to display-4 in BS5/Large in main.css */
+    font-size: 2.25rem;
     margin-bottom: 1.5rem;
     border-bottom: 3px solid var(--accent-color);
     display: inline-block;
@@ -39,7 +40,7 @@ p, li {
 }
 
 .lead-text {
-    font-size: 1.125rem; /* Equivalent to font-size-medium */
+    font-size: 1.125rem; 
     font-weight: 400;
     text-align: center;
 }
@@ -47,7 +48,7 @@ p, li {
 /* Navbar Styling */
 .navbar {
     background-color: var(--primary-color);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Stronger shadow for visibility */
 }
 .nav-link {
     color: var(--secondary-color) !important;
@@ -78,13 +79,13 @@ p, li {
     box-shadow: 0 10px 20px rgba(202, 138, 4, 0.15); /* Accent-driven shadow */
 }
 
-/* Section Backgrounds (Replicating main.css light background) */
+/* Section Backgrounds */
 #values, #experiences {
     background-color: var(--light-bg);
 }
 
 .scroll-offset {
-    scroll-margin-top: 6rem; /* Ensure anchor links stop below the fixed header */
+    scroll-margin-top: 70px; /* Match body's padding-top for accurate anchor links */
 }
 
 /* Decorative Elements */
@@ -113,9 +114,6 @@ p, li {
 /* Responsive Navbar */
 .navbar-toggler {
     border: none;
-}
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(202, 138, 4)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3csvg%3e");
 }
 
 @media (max-width: 768px) {
